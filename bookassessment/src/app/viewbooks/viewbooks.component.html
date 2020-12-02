@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search..." >
+    </div>
+
+
+
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody  *ngFor="let book of books">
+      <tr>
+        <th class="clickable" scope="row" [routerLink]="['/books/',book.id]" >{{book.image}}</th>
+        <td>{{book.name}}</td>
+        <td>{{book.description}}</td>
+        <td>{{book.price | currency}}</td>
+        
+      </tr>
